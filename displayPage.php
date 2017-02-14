@@ -8,7 +8,10 @@ Wyatt Tinsley wtj6tq -->
 </head>
 	
 <body><script src="functions.js" type="text/javascript"></script>
-<?php $type = ""; ?>
+<?php echo "<h1> Question Verification Page </h1>";
+	  echo "<h3> Review the entered information and submit when ready. </h3>"; 
+	  echo "<h3>Press back to return to previous page to edit question. </h3> <br> <br>";
+	  ?>
 Your entered question: <?php if (isset($_POST["question"])) { $type = "mul"; echo "<strong>" . $_POST["question"] . "</strong>";} ?> 
 <?php if (isset($_POST["question2"])) { $type = "tru"; echo "<strong>" . $_POST["question2"] . "</strong>";} ?>
 <?php if (isset($_POST["question3"])) { $type = "short"; echo "<strong>" . $_POST["question3"] . "</strong>";} ?> <br>
