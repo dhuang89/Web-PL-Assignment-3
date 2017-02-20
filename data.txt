@@ -1,28 +1,10 @@
-Question: daff
-Answer: A
-Choice A: 
-Choice B: 
-Choice C: 
-Choice D: 
-Question: daff
-Answer: A
-Choice A: fdas
-Choice B: afdfa
-Choice C: adfa
-Choice D: daf
-Question: dafas
+Question: Is the sun bright?
 Answer: True
-Choice A: fdas
-Choice B: afdfa
-Choice C: adfa
-Choice D: daf
-Question: fda
+Question: dafs
 Answer: True
-Question: fadsf
-Answer: A
-Choice A: adsf
-Choice B: afds
-Choice C: fdas
-Choice D: fda
-Question: fadsf
-Answer: dfaf
+Question: dafs
+Answer: True
+Question: dafs
+Answer: True
+Question: fdafdsf
+Answer: fdsafsd

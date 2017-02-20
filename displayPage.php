@@ -14,7 +14,7 @@ Wyatt Tinsley wtj6tq -->
 	  echo "<h3>Press back to return to previous page to edit question. </h3> <br> <br>";
 	  $GLOBALS['kind'] = 0;
 	  ?>
-Your entered question: <?php if (isset($_POST["question"])) { $type = "mul"; $_SESSION["type"] = 0; $_SESSION["q"] = $_POST["question"]; echo "<strong>" . $_POST["question"] . "</strong>";} ?> 
+<div align="center"> Your entered question: <?php if (isset($_POST["question"])) { $type = "mul"; $_SESSION["type"] = 0; $_SESSION["q"] = $_POST["question"]; echo "<strong>" . $_POST["question"] . "</strong>";} ?> 
 <?php if (isset($_POST["question2"])) { $type = "tru"; $_SESSION["type"] = 1; $_SESSION["q"] = $_POST["question2"]; echo "<strong>" . $_POST["question2"] . "</strong>";} ?>
 <?php if (isset($_POST["question3"])) { $type = "short"; $_SESSION["type"] = 2; $_SESSION["q"] = $_POST["question3"]; echo "<strong>" . $_POST["question3"] . "</strong>";} ?> <br>
 
@@ -27,16 +27,17 @@ Your entered question: <?php if (isset($_POST["question"])) { $type = "mul"; $_S
 <?php if (isset($_POST["B"])) { $_SESSION["y"] = $_POST["B"];echo "Answer B: <strong>" .  $_POST["B"] . "</strong>";} ?><br>
 <?php if (isset($_POST["C"])) { $_SESSION["z"] = $_POST["C"];echo "Answer C: <strong>" .  $_POST["C"] . "</strong>";} ?><br>
 <?php if (isset($_POST["D"])) { $_SESSION["zz"] = $_POST["D"];echo "Answer D: <strong>" .  $_POST["D"] . "</strong>";} ?><br>
+</div>
 
-<input type="submit" name="back" value="Back" onClick="history.go(-1);"> 
+<div align="center">
+<input type="submit" name="back" value="Back" onClick="history.go(-1);">
 
 <form method="post">
 	<input type="submit" name="confirm" id="confirm" value="Confirm">  
 </form>
+</div>
 
-<form action="DataEntry.php">
-    <input type="submit" value="Create Another Question" />
-</form>
+
 
 <?php 
 
@@ -65,7 +66,8 @@ function saveToText() {
 	}
 	
 
-	echo "Question and answer saved to data file.";
+	echo "<center>Question and answer saved to data file. </center> <br>";
+	echo "<form action='DataEntry.php'> <input type='submit' value='Create Another Question' /> </form>";
 }
 
 if (array_key_exists('confirm', $_POST)) {
