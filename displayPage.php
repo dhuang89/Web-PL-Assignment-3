@@ -98,7 +98,7 @@ function validateForm(){
       echo "Answer c cannot contain swears<br>";
       return false;
     }
-    if (strpos($d, ('fuck') !== false || strpos($d, ('shit') !== false ||strpos($d, ('bitch') !== false ){
+    if (strpos($d,'fuck') !== false || strpos($d,'shit') !== false ||strpos($d,'bitch') !== false ){
       echo "Answer d cannot contain swears<br>";
       return false;
     }
