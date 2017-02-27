@@ -69,9 +69,66 @@ function saveToText() {
 	echo "<center>Question and answer saved to data file. </center> <br>";
 	echo "<form action='DataEntry.php'> <input type='submit' value='Create Another Question' /> </form>";
 }
+function validateForm(){
+	if ($_SESSION["type"]==0){
+		//Validation of multiple choice
+		$q = $_SESSION["q"];
+		$a = $_SESSION["x"];
+		$b = $_SESSION["y"];
+		$c = $_SESSION["z"];
+		$d = $_SESSION["zz"];
+    if (strpos($q, '%') !== false || strpos($q, '^') !== false ||strpos($q, '#') !== false ||strpos($q, '@') !== false || strpos($q, '/') !== false ||strpos($q, '$') !== false ||strpos($q, '~') !== false){
+      echo "Question cannot contain the following invalid charaters: %, ^, #, @, /, $<br>";
+      return false;
+    }
+    if (strpos($q, 'fuck') !== false || strpos($q, 'shit') !== false ||strpos($q, 'bitch') !== false ){
+      echo "Question cannot contain swears<br>";
+      return false;
+    }
+
+	if (strpos($a,'fuck') !== false || strpos($a,'shit') !== false ||strpos($a,'bitch') !== false ){
+      echo "Answer a cannot contain swears<br>";
+      return false;
+    }
+    if (strpos($b, 'fuck') !== false || strpos($b, 'shit') !== false ||strpos($b, 'bitch') !== false ){
+      echo "Answer b cannot contain swears<br>";
+      return false;
+    }
+    if (strpos($c, 'fuck') !== false || strpos($c, 'shit') !== false ||strpos($c, 'bitch') !== false ){
+      echo "Answer c cannot contain swears<br>";
+      return false;
+    }
+    if (strpos($d, ('fuck') !== false || strpos($d, ('shit') !== false ||strpos($d, ('bitch') !== false ){
+      echo "Answer d cannot contain swears<br>";
+      return false;
+    }
+    return true;
+  }
+	else{
+		//validation of eveything that isn't multiple choice
+		$q = $_SESSION["q"];
+		$a = $_SESSION["a"];
+    if (strpos($q, '%') !== false || strpos($q, '^') !== false ||strpos($q, '#') !== false ||strpos($q, '@') !== false || strpos($q, '/') !== false ||strpos($q, '$') !== false ||strpos($q, '~') !== false){
+      echo "Question cannot contain the following invalid charaters: %, ^, #, @, /, $<br>";
+      return false;
+    }
+    if (strpos($q, 'fuck') !== false || strpos($q, 'shit') !== false ||strpos($q, 'bitch') !== false ){
+      echo "Question cannot contain swears<br>";
+      return false;
+    }
+    if (strpos($a, 'fuck') !== false || strpos($a, 'shit') !== false ||strpos($a, 'bitch') !== false ){
+      echo "Question cannot contain swears<br>";
+      return false;
+    }
+
+
+	}
+}
 
 if (array_key_exists('confirm', $_POST)) {
-	saveToText();
+	if(validateForm()){
+		saveToText();
+	}
 }
 
 ?>
