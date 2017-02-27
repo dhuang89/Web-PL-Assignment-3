@@ -21,11 +21,11 @@ function validateForm(type) {
       return false;
     }
 
-    if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
+    if (x.includes('%') !== false || x.includes('^') !== false ||x.includes('#') !== false ||x.includes('@') !== false || x.includes('/') !== false ||x.includes('$') !== false ||x.includes('~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
       return false;
     }
-    if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
+    if (x.includes('fuck') !== false || x.includes('shit') !== false ||x.includes('bitch') !== false ){
       alert("Question cannot contain swears");
       return false;
     }
@@ -34,19 +34,19 @@ function validateForm(type) {
       alert("Answer choices must be filled out.");
       return false;
     }
-    if (strpos($a, 'fuck') !== false || strpos($a, 'shit') !== false ||strpos($a, 'bitch') !== false ){
+    if (a.includes('fuck') !== false || a.includes('shit') !== false ||a.includes('bitch') !== false ){
       alert("Answer a cannot contain swears");
       return false;
     }
-    if (strpos($b, 'fuck') !== false || strpos($b, 'shit') !== false ||strpos($b, 'bitch') !== false ){
+    if (b.includes('fuck') !== false || b.includes('shit') !== false ||b.includes('bitch') !== false ){
       alert("Answer b cannot contain swears");
       return false;
     }
-    if (strpos($c, 'fuck') !== false || strpos($c, 'shit') !== false ||strpos($c, 'bitch') !== false ){
+    if (c.includes('fuck') !== false || c.includes('shit') !== false ||c.includes('bitch') !== false ){
       alert("Answer c cannot contain swears");
       return false;
     }
-    if (strpos($d, 'fuck') !== false || strpos($d, 'shit') !== false ||strpos($d, 'bitch') !== false ){
+    if (d.includes('fuck') !== false || d.includes('shit') !== false ||d.includes('bitch') !== false ){
       alert("Answer d cannot contain swears");
       return false;
     }
@@ -58,11 +58,11 @@ function validateForm(type) {
       alert("Question field must be filled out.");
       return false;
     }
-    if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
+    if (x.includes('%') !== false || x.includes('^') !== false ||x.includes('#') !== false ||x.includes('@') !== false || x.includes('/') !== false ||.includes($x, '$') !== false ||x.includes('~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
       return false;
     }
-    if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
+    if (x.includes('fuck') !== false || x.includes('shit') !== false ||x.includes('bitch') !== false ){
       alert("Question cannot contain swears");
       return false;
     }
@@ -76,11 +76,11 @@ function validateForm(type) {
       alert("Question field must be filled out.");
       return false;
     }
-    if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
+    if (x.includes('%') !== false || x.includes('^') !== false ||x.includes('#') !== false ||x.includes('@') !== false || x.includes('/') !== false ||x.includes('$') !== false ||x.includes('~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
       return false;
     }
-    if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
+    if (x.includes('fuck') !== false || x.includes('shit') !== false ||x.includes('bitch') !== false ){
       alert("Question cannot contain swears");
       return false;
     }
@@ -89,9 +89,9 @@ function validateForm(type) {
       alert("Answer field must be filled out.");
       return false;
     }
-    if (strpos($y, 'fuck') !== false || strpos($y, 'shit') !== false ||strpos($y, 'bitch') !== false ){
+    if (y.includes('fuck') !== false || y.includes('shit') !== false ||y.includes('bitch') !== false ){
       alert("Answer cannot contain swears");
-      return false;
+      return false;  
     }
   }
   
