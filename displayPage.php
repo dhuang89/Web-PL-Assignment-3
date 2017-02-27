@@ -77,6 +77,28 @@ function validateForm(){
 		$b = $_SESSION["y"];
 		$c = $_SESSION["z"];
 		$d = $_SESSION["zz"];
+
+		if($q === ""){
+			echo "Question cannot be blank<br>";
+			return false;
+		}
+		if($a === ""){
+			echo "Answer A cannot be blank<br>";
+			return false;
+		}
+		if($b === ""){
+			echo "Answer B cannot be blank<br>";
+			return false;
+		}
+		if($c === ""){
+			echo "Answer C cannot be blank<br>";
+			return false;
+		}
+		if($d === ""){
+			echo "Answer D cannot be blank<br>";
+			return false;
+		}
+
     if (strpos($q, '%') !== false || strpos($q, '^') !== false ||strpos($q, '#') !== false ||strpos($q, '@') !== false || strpos($q, '/') !== false ||strpos($q, '$') !== false ||strpos($q, '~') !== false){
       echo "Question cannot contain the following invalid charaters: %, ^, #, @, /, $<br>";
       return false;
@@ -108,6 +130,14 @@ function validateForm(){
 		//validation of eveything that isn't multiple choice
 		$q = $_SESSION["q"];
 		$a = $_SESSION["a"];
+		if($q === ""){
+			echo "Question cannot be blank<br>";
+			return false;
+		}
+		if($a === ""){
+			echo "Answer cannot be blank<br>";
+			return false;
+		}
     if (strpos($q, '%') !== false || strpos($q, '^') !== false ||strpos($q, '#') !== false ||strpos($q, '@') !== false || strpos($q, '/') !== false ||strpos($q, '$') !== false ||strpos($q, '~') !== false){
       echo "Question cannot contain the following invalid charaters: %, ^, #, @, /, $<br>";
       return false;
@@ -120,6 +150,7 @@ function validateForm(){
       echo "Question cannot contain swears<br>";
       return false;
     }
+    return true;
 
 
 	}
