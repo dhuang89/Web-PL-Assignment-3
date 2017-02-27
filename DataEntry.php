@@ -23,9 +23,11 @@ function validateForm(type) {
 
     if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
+      return false;
     }
     if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
       alert("Question cannot contain swears");
+      return false;
     }
 
     if (a == "" || b  == "" || c == "" || d == "") {
@@ -34,15 +36,19 @@ function validateForm(type) {
     }
     if (strpos($a, 'fuck') !== false || strpos($a, 'shit') !== false ||strpos($a, 'bitch') !== false ){
       alert("Answer a cannot contain swears");
+      return false;
     }
     if (strpos($b, 'fuck') !== false || strpos($b, 'shit') !== false ||strpos($b, 'bitch') !== false ){
       alert("Answer b cannot contain swears");
+      return false;
     }
     if (strpos($c, 'fuck') !== false || strpos($c, 'shit') !== false ||strpos($c, 'bitch') !== false ){
       alert("Answer c cannot contain swears");
+      return false;
     }
     if (strpos($d, 'fuck') !== false || strpos($d, 'shit') !== false ||strpos($d, 'bitch') !== false ){
       alert("Answer d cannot contain swears");
+      return false;
     }
   }
 
@@ -54,9 +60,11 @@ function validateForm(type) {
     }
     if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
+      return false;
     }
     if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
       alert("Question cannot contain swears");
+      return false;
     }
   }
 
@@ -70,9 +78,11 @@ function validateForm(type) {
     }
     if (strpos($x, '%') !== false || strpos($x, '^') !== false ||strpos($x, '#') !== false ||strpos($x, '@') !== false || strpos($x, '/') !== false ||strpos($x, '$') !== false ||strpos($x, '~') !== false){
       alert("Question cannot contain the following invalid charaters: %, ^, #, @, /, $");
+      return false;
     }
     if (strpos($x, 'fuck') !== false || strpos($x, 'shit') !== false ||strpos($x, 'bitch') !== false ){
       alert("Question cannot contain swears");
+      return false;
     }
 
     if (y == "") {
@@ -81,6 +91,7 @@ function validateForm(type) {
     }
     if (strpos($y, 'fuck') !== false || strpos($y, 'shit') !== false ||strpos($y, 'bitch') !== false ){
       alert("Answer cannot contain swears");
+      return false;
     }
   }
   
